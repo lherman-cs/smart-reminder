@@ -10,7 +10,7 @@ from .model import Model
 app = Flask(__name__, static_url_path='',
             static_folder=join('templates', 'dist'))
 
-REMINDERS_ON = False
+REMINDERS_ON = True
 MODEL = Model()
 
 

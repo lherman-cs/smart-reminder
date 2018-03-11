@@ -21,16 +21,16 @@ export default {
   name: "Main",
   data() {
     return {
-      isActive: false,
+      isActive: true,
       imgSrc:
-        "https://cdn3.iconfinder.com/data/icons/communication-2-3/63/alarm-off-256.png"
+        "https://cdn3.iconfinder.com/data/icons/communication-2-3/63/alarm-256.png"
     };
   },
   methods: {
     onClickOn: function() {
       if (!this.isActive) {
         this.$http.get("/reminders_on").then(() => {
-          this.isActive = 1;
+          this.isActive = true;
           this.imgSrc =
             "https://cdn3.iconfinder.com/data/icons/communication-2-3/63/alarm-256.png";
         });
@@ -39,7 +39,7 @@ export default {
     onClickOff: function() {
       if (this.isActive) {
         this.$http.get("/reminders_off").then(() => {
-          this.isActive = 0;
+          this.isActive = false;
           this.imgSrc =
             "https://cdn3.iconfinder.com/data/icons/communication-2-3/63/alarm-off-256.png";
         });
