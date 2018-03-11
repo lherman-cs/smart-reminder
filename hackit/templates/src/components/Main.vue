@@ -10,7 +10,7 @@
         </label>
       </div>
     </div>
-    <div class="row mt-5">
+    <div class="row mt-5 mb-5">
       <img :src="imgSrc">
     </div>
   </div>
@@ -29,7 +29,7 @@ export default {
   methods: {
     onClickOn: function() {
       if (!this.isActive) {
-        this.$http.get("/reminders_on").then(response => {
+        this.$http.get("/reminders_on").then(() => {
           this.isActive = 1;
           this.imgSrc =
             "https://cdn3.iconfinder.com/data/icons/communication-2-3/63/alarm-256.png";
@@ -38,7 +38,7 @@ export default {
     },
     onClickOff: function() {
       if (this.isActive) {
-        this.$http.get("/reminders_off").then(response => {
+        this.$http.get("/reminders_off").then(() => {
           this.isActive = 0;
           this.imgSrc =
             "https://cdn3.iconfinder.com/data/icons/communication-2-3/63/alarm-off-256.png";

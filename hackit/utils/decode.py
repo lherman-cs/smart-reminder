@@ -6,6 +6,7 @@ import io
 
 
 def decode(raw_bytes):
+    # stream = io.StringIO(raw_bytes)
     stream = io.BytesIO(raw_bytes)
     img = Image.open(stream)
 

@@ -5,7 +5,7 @@ import cv2 as cv
 class Model:
 
     def __init__(self):
-        with tf.gfile.FastGFile('frozen_inference_graph.pb', 'rb') as f:
+        with tf.gfile.FastGFile('model/frozen_inference_graph.pb', 'rb') as f:
             graph_def = tf.GraphDef()
             graph_def.ParseFromString(f.read())
 

@@ -1,12 +1,17 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, request
 from os.path import join
 import sys
+import json
+import base64
+
+from .utils import decode
+from .model import Model
 
 app = Flask(__name__, static_url_path='',
             static_folder=join('templates', 'dist'))
 
 REMINDERS_ON = False
-ON_SCREEN = False
+MODEL = Model()
 
 
 def log_msg(func, msg):
@@ -31,15 +36,21 @@ def reminders_on():
 
 @app.route("/leave")
 def leave():
-    global ON_SCREEN
-    ON_SCREEN = False
-    log_msg(leave.__name__, ON_SCREEN)
     return ('', 204)
+
+
+@app.route("/get_state", methods=["POST", ])
+def get_state():
+    img = request.form['current']
+    img = base64.b64decode(img)
+    img = decode(img)
+
+    return json.dumps({
+        "on_seat": MODEL.is_person(img),
+        "stop": not REMINDERS_ON
+    })
 
 
 @app.route("/")
 def index():
-    global ON_SCREEN
-    ON_SCREEN = True
-    log_msg(index.__name__, ON_SCREEN)
     return render_template(join('dist', 'index.html'))

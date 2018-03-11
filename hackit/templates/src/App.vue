@@ -1,9 +1,10 @@
 <template>
   <div id="app" class="container mt-3">
     <div class="row">
-      <div class="col">
+      <div class="col ml-5">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Clemson_University_Tiger_Paw_logo.svg/1200px-Clemson_University_Tiger_Paw_logo.svg.png" height="130px">
       </div>
+      <div class="col"></div>
       <div class="col"></div>
       <div class="col">
         <img src="http://cuhack.it/resources/RGB_logo.png" height="130px" alt="CU-Hackit_logo">
