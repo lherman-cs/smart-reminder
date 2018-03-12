@@ -16,10 +16,10 @@ For our demo, we have it set to interrupt the user every three seconds of contin
 ## The Future
 * We would add more hardware, this hardware would speak to the user, it would move to bug the user to take breaks, have LEDs integrated into it, and wheels to follow users around their home/workplace.
 * We would improve the software to:
-** Use eye-tracking to better determine if the user is actively working, and facial patterns to determine fatigue.
-** We would add timers to remind the user to eat, sleep, and workout throughout the day.
-** We would add a mobile app.
-** We would improve the error margins. 
-** We would add more controls to the user and more user-friendly and add authentication as well as deep learning to help learn the user's habits and patterns to optimize productivity.
+  * Use eye-tracking to better determine if the user is actively working, and facial patterns to determine fatigue.
+  * We would add timers to remind the user to eat, sleep, and workout throughout the day.
+  * We would add a mobile app.
+  * We would improve the error margins. 
+  * We would add more controls to the user and more user-friendly and add authentication as well as deep learning to help learn the user's habits and patterns to optimize productivity.
 * We would connect this device to the TV to be able to shut it off if children (or adults) have been watching TV for a pre-determined amount defined as too long.
 
