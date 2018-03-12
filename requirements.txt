@@ -2,3 +2,4 @@ numpy
 flask
 opencv-python
 tensorflow-gpu
+Pillow
