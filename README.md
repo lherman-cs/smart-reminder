@@ -13,6 +13,7 @@ For our demo, we have it set to interrupt the user every three seconds of contin
 * We define 'continuous work' as the amount of time which the user spends in front of the camera. 
 * Our server uses an nvidia GPU, but everything is made efficiently enough to work on any modern CPU as well.  
 
+
 ## The Future
 * We would add more hardware, this hardware would speak to the user, it would move to bug the user to take breaks, have LEDs integrated into it, and wheels to follow users around their home/workplace.
 * We would improve the software to:
@@ -23,3 +24,17 @@ For our demo, we have it set to interrupt the user every three seconds of contin
   * We would add more controls to the user and more user-friendly and add authentication as well as deep learning to help learn the user's habits and patterns to optimize productivity.
 * We would connect this device to the TV to be able to shut it off if children (or adults) have been watching TV for a pre-determined amount defined as too long.
 
+
+## System Dependencies
+You need to install python3, nodejs, and npm. *You might need to install GPU dependencies if you want to run tensorflow on your GPU*
+
+## How to install and run?
+Right now, we have a Makefile that only runs on Ubuntu. Later, we might support other platforms. If you are an ubuntu user, you can simply run the follow command to install the dependencies:
+```sh
+make
+```
+
+To run it, you can run the following command:
+```sh
+make run
+```
